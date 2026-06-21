@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Antic&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+<style>
+  .page article div{
+    margin-top: 0;
+    display: flex;
+    border-radius: 0;
+    overflow: unset;
+    background: none;
+
+  }
+
+
+</style>
+<body>
+<header class="site-header">
+  <div class="logo">
+    <img src="svg/logo-white.svg" alt="Театр Кочерги">
+  </div>
+
+  <nav class="main-nav">
+    <ul class="nav-list">
+      <li><a href="#">Афіша</a></li>
+      <li><a href="#">Репертуар</a></li>
+      <li><a href="#">Колектив</a></li>
+    </ul>
+  </nav>
+
+  <nav class="secondary-nav">
+    <ul class="nav-list">
+      <li><a href="#">Новини</a></li>
+      <li><a href="#" class="active">Контакти</a></li>
+    </ul>
+  </nav>
+
+  <div class="header-actions">
+    <button class="icon-btn search-btn" aria-label="Пошук">
+      <img src="svg/search.svg" alt="Пошук">
+    </button>
+    <button class="icon-btn profile-btn" aria-label="Профіль користувача">
+      <img src="svg/user.svg" alt="Профіль користувача">
+    </button>
+  </div>
+</header>
+
+<section class="hero" style="padding-bottom: 0;">
+  <img src="img/life-behing-a-curtain.png" alt="">
+  <div class="meanless-phrase">
+    <h3>БІЛЬШЕ НІЖ СЦЕНА</h3>
+    <p>
+      Театр Кочерги — це живий простір, де кожен елемент працює на спільний зміст. Тут новини стають частиною
+      нашої історії, а правила візиту допомагають вам налаштувати фокус на головне. Ми відкриваємо завісу над
+      нашими буднями та запрошуємо таланти стати частиною команди. Дізнайтеся, як живе наш театр поза межами
+      вистав та як ви можете долучитися до створення магії.
+    </p>
+  </div>
+  <div class="hero-headline" style="display: block; bottom: 0; right: 324px;"><h1 class="headline-text headline-top"
+                                                                                  style='margin-left: 90px; text-align: left;'>ЖИТТЯ</h1>
+    <div class="headline-bottom"><a href="#" class="headline-btn" aria-label="Перейти">
+      <img src="svg/vector-right-down.svg" alt="">
+    </a>
+      <h2 class="headline-text headline-left">ЗА ЗАВІСОЮ
+      </h2></div>
+  </div>
+</section>
+
+<div class="page">
+
+  <aside class="sidebar">
+    <nav class="sidebar__nav" aria-label="Розділи сайту">
+
+      <div class="sidebar__item">
+        <a class="sidebar__link" href="#">
+          Історія театру
+          <img class="sidebar__icon" src="svg/vector_rep_not_active.svg" alt="">
+        </a>
+      </div>
+
+      <div class="sidebar__item is-active">
+        <a class="sidebar__link" href="#" aria-current="page">
+          Архітектура
+          <img class="sidebar__icon" src="svg/vector_rep_active.svg" alt="">
+        </a>
+                        <ul class="sidebar__submenu">
+                            <li><a href="#">Будівля театру</a></li>
+                            <li><a href="#">Технічні характеристики</a></li>
+                            <li><a href="#">Галерея</a></li>
+                        </ul>
+      </div>
+
+      <div class="sidebar__item">
+        <a class="sidebar__link" href="#">
+          Доступ до інформації
+          <img class="sidebar__icon" src="svg/vector_rep_not_active.svg" alt="">
+        </a>
+      </div>
+
+      <div class="sidebar__item">
+        <a class="sidebar__link" href="#">
+          Вакансії
+          <img class="sidebar__icon" src="svg/vector_rep_not_active.svg" alt="">
+        </a>
+      </div>
+
+      <div class="sidebar__item">
+        <a class="sidebar__link" href="#">
+          Правила
+          <img class="sidebar__icon" src="svg/vector_rep_not_active.svg" alt="">
+        </a>
+      </div>
+
+      <div class="sidebar__item">
+        <a class="sidebar__link" href="#">
+          Новини
+          <!-- за макетом цей пункт завжди з "активною" стрілкою, навіть у сірому стані -->
+          <img class="sidebar__icon" src="svg/vector_rep_active.svg" alt="">
+        </a>
+      </div>
+
+    </nav>
+  </aside>
+
+  <div class="article-col">
+    <article>
+      <h1>Архітектура</h1>
+
+      <p>Гортаючи історію містобудування та історію забудови Житомира не останнє місце серед архітектурних родзинок займає будівля театру. А точніше будівлі театрів. Житомир був одним з небагатьох міст, у яких уже на початку XIX століття існували театри в загальнодоступних спеціальних</p>
+
+      <p>У 1809 році у Житомирі було побудоване перше стаціонарне приміщення театру (будинок був дерев'яний, мав 350 місць) за ініціативою волинського губернатора М.І.Камбурлея. На жаль в 1842 році пожежа знищила будівлю театру.
+        У 1858 році було відкрито відомий будинок по вулиці Пушкінській, котрий, ще й сьогодні є красенем архітектури (тепер тут міститься обласна державна філармонія і будівля є пам’ятником архітектури). Одним з ініціаторів і ентузіастів нової будови був польський письменник Юзеф-Ігнацій Крашевський.</p>
+
+      <p>У 1966 році 7 листопада виставою І. Рачади «Коли мертві оживають» (режисер з.д.м України М.Єсипенко) відбулося відкриття новозбудованого театру в Житомирі, який і донині є головною театральною сценою Житомирщини. Відкриття театру стало визначною подією всесоюзного значення. На церемонію прибули видатні майстри сцени: український драматург О.Корнійчук, народні артисти СРСР Д.Гнатюк, В.Дальський. Колектив театру отримав безліч листів та поздоровлень та навіть телеграму з привітанням від Міністра культури СРСР Катерини Фурцевої.</p>
+      <p>На території нашого міста є певні місця, які мають своєрідний генетичний код, своє історичне призначення. Так подібне можна сказати і про місце спорудження нового приміщення театру. Вже в наш час сучасна будівля Житомирського українського музично-драматичного театру дістала статус пам’ятки архітектури місцевого значення.</p>
+      <br>
+      <br>
+
+      <section class="banner-slider">
+
+        <div class="banner-slider__top">
+    <span class="banner-slider__counter">
+      <span class="js-bs-current">01</span>/<span class="js-bs-total">10</span>
+    </span>
+          <div class="banner-slider__progress js-bs-progress"></div>
+        </div>
+
+        <div class="swiper banner-slider__swiper">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide banner-slider__slide">
+              <img src="img/poster_1.png" alt="">
+            </div>
+            <div class="swiper-slide banner-slider__slide">
+              <img src="img/poster_2.png" alt="">
+            </div>
+            <div class="swiper-slide banner-slider__slide">
+              <img src="img/poster_3.png" alt="">
+            </div>
+            <div class="swiper-slide banner-slider__slide">
+              <img src="img/poster_1.png" alt="">
+            </div>
+            <div class="swiper-slide banner-slider__slide">
+              <img src="img/poster_2.png" alt="">
+            </div>
+            <div class="swiper-slide banner-slider__slide">
+              <img src="img/poster_3.png" alt="">
+            </div>
+            <div class="swiper-slide banner-slider__slide">
+              <img src="img/poster_1.png" alt="">
+            </div>
+            <div class="swiper-slide banner-slider__slide">
+              <img src="img/poster_2.png" alt="">
+            </div>
+            <div class="swiper-slide banner-slider__slide">
+              <img src="img/poster_3.png" alt="">
+            </div>
+            <div class="swiper-slide banner-slider__slide">
+              <img src="img/poster_1.png" alt="">
+            </div>
+
+          </div>
+        </div>
+
+      </section>
+    </article>
+  </div>
+
+</div>
+
+<div class="theater-stage">
+
+  <!-- АКТ ПЕРШИЙ -->
+  <div class="act-primary">
+
+    <!-- Афіша з актором -->
+    <div class="actor-poster">
+      <img src="img/photo_1.png" alt="Актор на сцені">
+
+      <div class="backstage-overlay">
+        <div class="monologue">
+          Текст не вчиться.<br>
+          Він вростає в шкіру.<br>
+          Спостерігай та відчувай все
+        </div>
+        <div class="backstage-footer">
+          <div class="troupe-cast">
+            <div class="actor-avatar" style="background-image: url('https://via.placeholder.com/24'); background-size: cover;"></div>
+            <div class="actor-avatar" style="background-image: url('https://via.placeholder.com/24'); background-size: cover;"></div>
+            <div class="actor-avatar" style="background-image: url('https://via.placeholder.com/24'); background-size: cover;"></div>
+          </div>
+          <div class="join-troupe-btn">
+            Доєднуйся
+            <img src="svg/vector_right.svg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Головна афіша -->
+    <div class="playbill-banner">
+      <div class="performance-modes">
+        <div class="mode-item active-scene">Відчувай</div>
+        <div class="mode-item">Дивись</div>
+        <div class="mode-item">Долучайся</div>
+      </div>
+
+      <div class="playbill-details">
+        <h1 class="theater-headline">KOCHERGA<br>THEATER</h1>
+        <div class="intermission-divider"></div>
+        <div class="play-synopsis">
+          Мистецтво бути глядачем. Дізнайтеся, як народжується тиша та з чого починається ваша вистава. Театр починається не з вішалки, а з поваги до моменту. Наші правила та історія.
+        </div>
+      </div>
+
+      <!-- Стрілка дії -->
+      <img src="svg/vector_strict_right.svg" class="action-pointer" alt="">
+    </div>
+  </div>
+
+  <!-- АКТ ДРУГИЙ -->
+  <div class="act-epilogue">
+
+    <div class="manifesto-headline">
+      ВІДЧУЙТЕ <span class="text-dramatic">СПРАВЖНІ</span> <span class="about-theater-tag">[Про нас]</span><br>
+      <span class="text-dramatic">ЕМОЦІЇ</span> ПОСЕРЕД ЖИТТЯ
+    </div>
+
+    <div class="credo-box credo-box--left">
+      <div class="credo-box__content">
+        Ми створюємо події що змушують серце битися швидше а думки шукати нові сенси у звичному світі буденності
+      </div>
+    </div>
+
+    <div class="credo-box credo-box--right">
+      <div class="credo-box__content">
+        Кожна деталь нашої вистави від декорацій до останнього слова у фіналі працює на те щоб ви відчули силу справжнього театру
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- FOOTER SECTION -->
+<footer class="site-footer">
+  <div class="footer-container">
+
+    <div class="footer-socials">
+      <a href="#" class="social-btn" aria-label="Twitter">
+        <img src="svg/twitter.svg" alt="Twitter">
+      </a>
+      <a href="#" class="social-btn" aria-label="Facebook">
+        <img src="svg/facebook.svg" alt="Facebook">
+      </a>
+      <a href="#" class="social-btn" aria-label="Instagram">
+        <img src="svg/instagram.svg" alt="Instagram">
+      </a>
+    </div>
+
+    <div class="footer-info">
+      <img src="svg/logo-red.svg" alt="Театр Кочерги" class="footer-logo">
+      <div class="info-block">
+        <span class="info-label">Адреса</span>
+        <p class="info-text">10014, м. Житомир. Майдан Соборний. 6</p>
+      </div>
+      <div class="info-block">
+        <span class="info-label">Директор-художній керівник театру</span>
+        <p class="info-text">Анастасія Кузьменко</p>
+      </div>
+      <div class="info-block">
+        <span class="info-label">Головний режисер театру</span>
+        <p class="info-text">заслужений артист України Петро Авраменко</p>
+      </div>
+    </div>
+
+    <nav class="footer-nav">
+      <ul>
+        <li><a href="#">АФІША <span class="arrow"><img src="svg/vector-footer.svg" alt="↗"></span></a></li>
+        <li><a href="#">РЕПЕРТУАР <span class="arrow"><img src="svg/vector-footer.svg" alt="↗"></span></a></li>
+        <li><a href="#">КОЛЕКТИВ <span class="arrow"><img src="svg/vector-footer.svg" alt="↗"></span></a></li>
+        <li><a href="#">ПРАВИЛА <span class="arrow"><img src="svg/vector-footer.svg" alt="↗"></span></a></li>
+        <li><a href="#">КОНТАКТИ <span class="arrow"><img src="svg/vector-footer.svg" alt="↗"></span></a></li>
+      </ul>
+    </nav>
+
+    <nav class="footer-nav">
+      <ul>
+        <li><a href="#">ІСТОРІЯ ТЕАТРУ <span class="arrow"><img src="svg/vector-footer.svg" alt="↗"></span></a></li>
+        <li>
+          <a href="#">АРХІТЕКТУРА <span class="arrow"><img src="svg/vector-footer.svg" alt="↗"></span></a>
+          <ul class="sub-menu">
+            <li><a href="#">БУДІВЛЯ ТЕАТРУ</a></li>
+            <li><a href="#">ТЕХНІЧНІ ХАРАКТЕРИСТИКИ</a></li>
+            <li><a href="#">ГАЛЕРЕЯ</a></li>
+          </ul>
+        </li>
+        <li><a href="#">ДОСТУП ДО ІНФОРМАЦІЇ <span class="arrow"><img src="svg/vector-footer.svg" alt="↗"></span></a></li>
+        <li><a href="#">ВАКАНСІЇ <span class="arrow"><img src="svg/vector-footer.svg" alt="↗"></span></a></li>
+      </ul>
+    </nav>
+
+    <div class="footer-action">
+      <a href="tel:0412473388" class="phone-btn">
+        <img src="svg/phone-return.svg" alt="" class="phone-icon">
+        <div class="phone-text">
+          <span class="phone-number">(0412) 47-33-88</span>
+          <span class="phone-desc">ТЕЛЕФОН КАСИ ТЕАТРУ</span>
+        </div>
+      </a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 — ЖИТОМИРСЬКИЙ АКАДЕМІЧНИЙ УКРАЇНСЬКИЙ МУЗИЧНО-ДРАМАТИЧНИЙ ТЕАТР ІМЕНІ ІВАНА КОЧЕРГИ</p>
+  </div>
+</footer>
+
+</body>
+<script src="scripts/posters.js"></script>
+</html>

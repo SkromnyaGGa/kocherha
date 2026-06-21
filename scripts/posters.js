@@ -1,40 +1,41 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const currentNumEl = document.getElementById('slide-current');
-    const totalNumEl = document.getElementById('slide-total');
+const sliderRoot = document.querySelector('.banner-slider');
+const progressEl = sliderRoot.querySelector('.js-bs-progress');
+const currentEl  = sliderRoot.querySelector('.js-bs-current');
+const totalEl    = sliderRoot.querySelector('.js-bs-total');
+const slidesCount = sliderRoot.querySelectorAll('.swiper-slide').length;
 
-    const postersSwiper = new Swiper('.posters-swiper', {
-        slidesPerView: 'auto', // Важливо: дозволяє слайдам мати власну ширину
-        spaceBetween: 20,      // Відступ між постерами
-        grabCursor: true,      // Курсор-рука при наведенні
+totalEl.textContent = String(slidesCount).padStart(2, '0');
 
-        // Налаштування пагінації (смужки)
-        pagination: {
-            el: '.progress-pagination',
-            clickable: true,
-            type: 'bullets',
+// генеруємо риски прогрес-бару, по одній на слайд
+const dashes = [];
+for (let i = 0; i < slidesCount; i++) {
+    const dash = document.createElement('span');
+    dash.className = 'banner-slider__dash';
+    progressEl.appendChild(dash);
+    dashes.push(dash);
+}
+
+function setActiveDash(index) {
+    dashes.forEach((d, i) => d.classList.toggle('is-active', i === index));
+    currentEl.textContent = String(index + 1).padStart(2, '0');
+}
+
+const swiper = new Swiper('.banner-slider__swiper', {
+    slidesPerView: 'auto',
+    spaceBetween: 0, // відступ заданий через margin-right у css (var(--bs-gap))
+    freeMode: {
+        enabled: true,
+        sticky: true,
+        momentumBounce: false,
+    },
+    grabCursor: true,
+    watchSlidesProgress: true,
+    on: {
+        init(sw) {
+            setActiveDash(sw.activeIndex);
         },
-
-        // Події для оновлення лічильника
-        on: {
-            init: function () {
-                updateFraction(this);
-            },
-            slideChange: function () {
-                updateFraction(this);
-            }
-        }
-    });
-
-    // Функція для оновлення цифр
-    function updateFraction(swiperInstance) {
-        // Додаємо нуль спереду, якщо число менше 10 (наприклад, 04)
-        let currentSlide = swiperInstance.realIndex + 1;
-        let formattedCurrent = currentSlide < 10 ? '0' + currentSlide : currentSlide;
-
-        let totalSlides = swiperInstance.slides.length;
-        let formattedTotal = totalSlides < 10 ? '0' + totalSlides : totalSlides;
-
-        if (currentNumEl) currentNumEl.textContent = formattedCurrent;
-        if (totalNumEl) totalNumEl.textContent = '/' + formattedTotal; // або '/ ' + formattedTotal
-    }
+        slideChange(sw) {
+            setActiveDash(sw.activeIndex);
+        },
+    },
 });

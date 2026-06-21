@@ -161,13 +161,15 @@ body {
 }
 
 .subscribe-text {
+    position: relative;
     margin: 0;
     font-family: 'Unbounded', sans-serif;
     font-size: 14px;
     font-weight: 300;
     color: white;
     line-height: 1.5;
-    width: 96%;
+    width: 84%;
+    left: 5%;
 }
 
 /* --- Центральний play-button --- */
@@ -768,11 +770,11 @@ body {
 
 .monologue {
     font-size: 16px;
-    line-height: 1;
+    line-height: 1.2;
     color: white;
     margin-bottom: 15px;
     font-family: 'Unbounded', sans-serif;
-    font-weight: 100;
+    font-weight: 300;
 }
 
 .backstage-footer {
@@ -786,8 +788,8 @@ body {
 }
 
 .actor-avatar {
-    width: 24px;
-    height: 24px;
+    width: 31px;
+    height: 31px;
     border-radius: 50%;
     background-color: #555;
     border: 2px solid #ffffff;
@@ -798,12 +800,13 @@ body {
 .join-troupe-btn {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 40px;
     font-size: 16px;
     font-weight: 300;
     text-transform: uppercase;
     cursor: pointer;
     color: #ffffff;
+    font-family: "Unbounded", sans-serif;
 }
 
 .join-troupe-btn svg {
@@ -888,7 +891,7 @@ body {
     justify-content: space-between;
     align-items: flex-end;
     gap: 20px;
-    padding: 100px 0 100px 0;
+    padding-top: 50px;
 }
 
 .manifesto-headline {
@@ -920,33 +923,71 @@ body {
 
 .credo-deck {
     display: flex;
-    gap: 15px;
+    gap: 20px;
 }
 
 .credo-box {
-    background-color: var(--backstage-gray);
-    border: 1px solid var(--scenery-border);
-    border-radius: 12px;
-    padding: 20px;
-    width: 220px;
-    font-size: 11px;
-    color: #888;
-    line-height: 1.6;
     position: relative;
+    width: 220px;
+    min-height: 170px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Індикатор на першій картці маніфесту */
-.credo-box.with-cue::after {
-    content: '';
+.credo-box__content {
+    position: relative;
+    z-index: 2;
+    width: 230px;
+    text-align: left;
+    font-size: 18px;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-weight: lighter;
+}
+
+.credo-box::before {
+    content: "";
     position: absolute;
+
     top: 50%;
-    right: -6px;
-    transform: translateY(-50%) rotate(45deg);
-    width: 10px;
-    height: 10px;
-    background-color: var(--backstage-gray);
-    border-top: 1px solid var(--scenery-border);
-    border-right: 1px solid var(--scenery-border);
+    left: 50%;
+
+    width: 340px;      /* розмір svg */
+    height: 240px;
+
+    transform: translate(-50%, -50%);
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    z-index: -1;
+    pointer-events: none;
+}
+
+.credo-box--left::before {
+    background-image: url("svg/ticket_left.svg");
+    width: 530px;
+    height: 370px;
+    left: 43%;
+    top: 69%;
+}
+
+.credo-box--right::before {
+    background-image: url("svg/ticket_right.svg");
+    width: 346px;
+    height: 210px;
+    left: 0;
+    top: 66%;
+}
+.credo-box--left .credo-box__content {
+    transform: translate(-20px, 30px);
+}
+
+.credo-box--right .credo-box__content {
+    transform: translate(-100px, 30px);
 }
 
 /* Адаптація під екрани (Режисура адаптивності) */
@@ -1169,10 +1210,11 @@ body {
 /* Single */
 
 .single {
-    padding: 40px 20px;
-    max-width: 1400px;
+    padding: 40px 0;
+    max-width: 1570px;
     margin: 0 auto;
     font-family: 'Inter', sans-serif;
+
 }
 
 .single__container {
@@ -1183,18 +1225,20 @@ body {
 }
 
 .single__card {
-    background-color: #1a1a1c;
+    background-color: #191919;
     border-radius: 12px;
     padding: 40px;
     margin-bottom: 20px;
+    border: 1px solid #262626;
 }
 
 .single__card.sidebar {
     padding: 30px;
+    font-family: 'Manrope', sans-serif;
 }
 
 .card-title {
-    color: #8c8c8e;
+    color: #999999;
     font-size: 16px;
     font-weight: 500;
     margin-bottom: 24px;
@@ -1240,7 +1284,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
+    color: #999999;
     cursor: pointer;
     transition: background-color 0.3s, border-color 0.3s;
 }
@@ -1310,15 +1354,17 @@ body {
     font-size: 20px;
     font-weight: 500;
     color: white;
+    font-family: 'Manrope', sans-serif;
 }
 
 /* Внутрішні темні блоки (для рейтингу та персон) */
 .inner-box {
-    background-color: #121212;
+    background-color: #141414;
     border-radius: 8px;
     padding: 12px 16px;
     display: flex;
     align-items: center;
+    border: 1px solid #262626;
 }
 
 /* Рейтинг */
@@ -1364,12 +1410,12 @@ body {
 }
 
 .tag {
-    background-color: transparent;
-    border: 1px solid #333;
+    background-color: #141414;
+    border: 1px solid #262626;
     padding: 6px 12px;
     border-radius: 4px;
     font-size: 14px;
-    color: #e0e0e0;
+    color: #fff;
 }
 
 /* Персони (Режисер, Автор) */
@@ -1408,7 +1454,7 @@ body {
     color: #ffffff;
     border: none;
     border-radius: 8px;
-    padding: 28px 10px;
+    padding: 84.5px 10px;
     font-size: 28px;
     font-weight: 500;
     display: flex;
@@ -1447,97 +1493,450 @@ body {
     }
 }
 
-/* --- Секція Постерів --- */
-.posters-section {
-    padding: 40px 20px;
-    color: #ffffff;
-    overflow: hidden; /* Щоб карусель не виходила за межі екрану */
-}
+/* ============================================
+   BANNER SLIDER
+   ============================================ */
 
-.posters__container {
-    max-width: 1400px;
-    margin: 0 auto;
-}
+.banner-slider {
+    --bs-gap: clamp(10px, 1.2vw, 16px);
+    --bs-side-padding: clamp(20px, 9vw, 137px);
+    --bs-radius: 14px;
 
-/* --- Шапка (Лічильник та Пагінація) --- */
-.carousel-header {
-    margin-bottom: 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.carousel-fraction {
-    font-size: 24px;
-    font-weight: 300;
-    display: flex;
-    align-items: baseline;
-}
-
-.current-num {
-    color: #ffffff;
-}
-
-.total-num {
-    color: #555555;
-    font-size: 20px;
-    margin-left: 4px;
-}
-
-/* Кастомна пагінація Swiper (смужки) */
-.carousel-header .progress-pagination {
-    position: static;
-    display: flex;
-    gap: 8px;
-    width: auto;
-    max-width: 300px; /* Обмежуємо ширину блоку з пагінацією */
-}
-
-/* Стилізація окремої смужки (буліта) */
-.swiper-pagination-bullet {
-    flex: 1;
-    height: 2px;
-    background-color: #333333;
-    border-radius: 0;
-    opacity: 1;
-    margin: 0 !important; /* Перевизначаємо стандартні відступи Swiper */
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.swiper-pagination-bullet-active {
-    background-color: #ffffff;
-}
-
-/* --- Карусель та Слайди --- */
-.posters-swiper {
     width: 100%;
-    overflow: visible; /* Дозволяє бачити слайди, які виходять за правий край контейнера */
+    padding-block: clamp(24px, 4vw, 48px);
+    color: #fff;
+    font-family: -apple-system, "SF Pro Display", "Inter", system-ui, sans-serif;
+    overflow: hidden;
+    margin: 0 auto;
+    max-width: 1570px;
 }
+
+/* ---------- верхній рядок: лічильник + прогрес-бар з рисок ---------- */
+
+.banner-slider__top {
+    align-items: center;
+    gap: 18px;
+    margin-bottom: clamp(16px, 2.5vw, 28px);
+}
+
+.banner-slider__counter {
+    flex-shrink: 0;
+    font-size: clamp(14px, 1.3vw, 30px);
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    color: #fff;
+    font-variant-numeric: tabular-nums;
+    font-family: 'Antic', cursive;
+}
+
+.banner-slider__progress {
+    display: flex;
+    gap: 6px;
+    flex-wrap: nowrap;
+    padding-top: 10px;
+}
+
+.banner-slider__dash {
+    height: 3px;
+    width: clamp(16px, 2.4vw, 34px);
+    border-radius: 2px;
+    background: rgba(255, 255, 255, 0.28);
+    transition: background-color 0.25s ease;
+}
+
+.banner-slider__dash.is-active {
+    background: #fff;
+}
+
+/* ---------- сам swiper ---------- */
 
 .swiper-slide {
-    width: 260px; /* Фіксована ширина слайду для ефекту нескінченної прокрутки */
-    height: auto;
+    width: 17.5% !important;
+}
+
+.banner-slider__swiper {
+    width: 100%;
+    /* overflow: hidden зʼявляється з класу .swiper за замовчуванням —
+       завдяки цьому останній слайд буде "обрізаний" по правому краю,
+       як на скріншоті */
+    padding-inline-start: var(--bs-side-padding);
+}
+
+.banner-slider__swiper .swiper-wrapper {
+    /* без цього свайп по інерції смикається */
+    align-items: stretch;
+}
+
+.banner-slider__slide {
+    width: clamp(170px, 17vw, 254px);
+    margin-right: var(--bs-gap);
+    aspect-ratio: 5 / 5.6;
+    border-radius: var(--bs-radius);
+    overflow: hidden;
+    background: #1a1a1a; /* плейсхолдер, поки картинка вантажиться */
+    cursor: grab;
+}
+
+.banner-slider__slide:active {
+    cursor: grabbing;
+}
+
+.banner-slider__slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    pointer-events: none;
+    user-select: none;
+}
+
+@media (max-width: 640px) {
+    .banner-slider__swiper {
+        padding-inline-start: var(--bs-side-padding);
+    }
+    .banner-slider__slide {
+        width: clamp(130px, 38vw, 180px);
+    }
+}
+
+.hero-title {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 40px;
+    position: absolute;
+    top: 67%;
+    left: 126px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 60px;
+    backdrop-filter: blur(10px);
+    padding: 40px 90px;
+    border: 1px solid white;
+}
+
+.hero-small{
+    position: absolute;
+    max-width: 54px;
+    color: #fff;
+    font-family: 'Unbounded', sans-serif;
+    top: 766px;
+    left: 20px;
+}
+
+.hero-small h3{
+    font-size: 16px;
+}
+.hero-small p{
+    font-size: 12px;
+    line-height: 1.4;
+    font-weight: 350;
+    color: #b1b1b1;
+}
+.team-card-bottom {
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: 'Unbounded', sans-serif;
+    margin: 10px auto;
+}
+
+.cta-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 16px 24px;
+    background-color: #ff1a0a; /* основний червоний */
+    border: none;
+    border-radius: 50px; /* пігулка */
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    font-family: 'Unbounded', sans-serif;
+    text-decoration: none;
+}
+
+.cta-button:hover {
+    background-color: #C71E18; /* трохи темніший на ховер */
+}
+
+.cta-button:active {
+    transform: scale(0.98);
+}
+
+.cta-button svg,
+.cta-button img {
+    width: 31px;
+    height: 31px;
     flex-shrink: 0;
 }
 
-.poster-img {
-    width: 100%;
-    aspect-ratio: 1 / 1; /* Або 4/5, залежно від реальних пропорцій ваших фото */
-    object-fit: cover;
-    border-radius: 12px;
+.theater-people {
+    position: absolute;
+    bottom: 50%;
+    left: 70%;
+    color: #fff;
+    font-family: 'Unbounded', sans-serif;
+}
+
+.theater-people h3{
+    font-size: 33px;
+    max-width: 412px;
+}
+
+.theater-people p{
+    font-size: 14px;
+    max-width: 357px;
+    font-weight: 300;
+}
+.theater-people .underline{
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    text-transform: uppercase;
+    font-weight: lighter;
+}
+
+.hero-single{
+    position: relative;
+}
+
+.theater-person{
+    position: absolute;
+    bottom: 0;
+    left: 54%;
+    color: #fff;
+    font-family: 'Unbounded', sans-serif;
+    max-width: 786px;
+}
+
+.theater-person h1{
+    font-size: 60px;
+    text-transform: uppercase;
+    max-width: 100px;
+    margin-bottom: 0;
+}
+
+.theater-person h2{
+    font-size: 40px;
+    text-transform: uppercase;
+    max-width: 700px;
+    font-weight: lighter;
+    margin-top: 0;
+}
+
+.theater-person p{
+    font-size: 14px;
+    font-weight: lighter;
+}
+.year-of-birth {
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    font-size: 30px;
+}
+.year-of-birth .day-month{
+font-weight: bold;
+}
+
+.meanless-phrase{
+    position: absolute;
+    font-family: 'Unbounded', sans-serif;
+    color: white;
+    max-width: 342px;
+    top: 15%;
+    left: 2%;
+}
+.meanless-phrase h3{
+    font-size: 33px;
+    max-width: 267px;
+    margin-bottom: 0;
+}
+
+.meanless-phrase p{
+    font-size: 14px;
+    font-weight: lighter;
+
+}
+
+.page{
+    --bg: #000000;
+    --fg: #ffffff;
+    --muted: rgba(255,255,255,.66);
+    --divider: #fff;
+    --radius: 26px;
+    --gap: 76px;
+
+    display: flex;
+    align-items: flex-start;
+    gap: var(--gap);
+    max-width: 98%;
+    margin: 0 auto;
+    padding: 72px 56px;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: 'Unbounded', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.page, .page *{ box-sizing: border-box; }
+
+.page a{ color: inherit; }
+
+.page .sidebar{
+    flex: 0 0 406px;
+    padding-right: var(--gap);
+    border-right: 1px solid var(--divider);
+    align-self: stretch;
+}
+
+.page .sidebar__nav{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.page .sidebar__item{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.page .sidebar__link{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: .2px;
+    line-height: 1.15;
+    color: var(--muted);
+    transition: opacity .15s ease;
+}
+
+.page .sidebar__icon{
+    flex: 0 0 auto;
+    width: 21px;
+    height: 21px;
     display: block;
 }
 
-/* Адаптивність для мобільних */
-@media (max-width: 768px) {
-    .swiper-slide {
-        width: 200px;
-    }
-    .carousel-fraction {
-        font-size: 20px;
-    }
-    .total-num {
-        font-size: 16px;
-    }
+/* активний пункт — жирніший і білий, інші лишаються приглушено-сірими */
+.page .sidebar__item.is-active > .sidebar__link{
+    font-weight: 800;
+    color: var(--fg);
 }
+
+.page .sidebar__link:hover,
+.page .sidebar__link:focus-visible{ opacity: .6; }
+
+.page .sidebar__link:focus-visible{ outline: 1px solid var(--fg); outline-offset: 4px; }
+
+/* підменю активного розділу — легша вага, без іконок, з відступом */
+.page .sidebar__submenu{
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 38px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.page .sidebar__submenu a{
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: .2px;
+    line-height: 1.5;
+    color: var(--muted);
+    transition: opacity .15s ease;
+}
+
+.page .sidebar__submenu a:hover,
+.page .sidebar__submenu a:focus-visible{ opacity: .6; }
+
+.page .article-col{
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+/* ---------- сама стаття — все, що всередині неї, без класів (крім img) ---------- */
+/* стилі на сам блок і на теги всередині нього висять через тег-селектори          */
+
+.page article h1{
+    margin: 0 0 26px;
+    font-size: clamp(32px, 3.4vw, 46px);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .2px;
+    line-height: 1.05;
+}
+
+.page article p{
+    margin: 0 0 18px;
+    max-width: 100%;
+    font-size: 16px;
+    font-weight: lighter;
+    line-height: 1.65;
+    color: white;
+}
+
+.page article p:last-of-type{ margin-bottom: 0; }
+
+.page article div{
+    margin-top: 44px;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(3, 108px);
+    gap: 4px;
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: #111;
+}
+
+.page article img{
+    display: block;
+    object-fit: cover;
+}
+
+/* зображення — єдиний елемент, якому дозволені власні класи */
+
+.page .photo{ filter: grayscale(1) contrast(1.08) brightness(.92); }
+
+.page .photo--poster{
+    filter: sepia(.55) saturate(2.1) hue-rotate(-8deg) contrast(1.05) brightness(.92);
+}
+
+.page .p1{  grid-column: 1 / 2; grid-row: 1 / 2; }
+.page .p2{  grid-column: 1 / 2; grid-row: 2 / 3; }
+.page .p3{  grid-column: 1 / 2; grid-row: 3 / 4; }
+
+.page .p4{  grid-column: 2 / 3; grid-row: 1 / 3; }
+.page .p5{  grid-column: 2 / 3; grid-row: 3 / 4; }
+
+.page .p6{  grid-column: 3 / 4; grid-row: 1 / 2; }
+.page .p7{  grid-column: 3 / 4; grid-row: 2 / 4; }
+
+.page .p8{  grid-column: 4 / 5; grid-row: 1 / 3; }
+.page .p9{  grid-column: 4 / 5; grid-row: 3 / 4; }
+
+.page .p10{ grid-column: 5 / 6; grid-row: 1 / 2; }
+.page .p11{ grid-column: 5 / 6; grid-row: 2 / 3; }
+.page .p12{ grid-column: 5 / 6; grid-row: 3 / 4; }
+
+.page .p13{ grid-column: 6 / 7; grid-row: 1 / 4; }
+
+.page .p14{ grid-column: 7 / 8; grid-row: 1 / 2; }
+.page .p15{ grid-column: 7 / 8; grid-row: 2 / 4; }
+
+.page .p16{ grid-column: 8 / 9; grid-row: 1 / 3; }
+.page .p17{ grid-column: 8 / 9; grid-row: 3 / 4; }
+
+.page .p18{ grid-column: 9 / 10; grid-row: 1 / 4; }

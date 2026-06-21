@@ -14,7 +14,6 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <body>
-<!-- HEADER SECTION -->
 <header class="site-header">
     <div class="logo">
         <img src="svg/logo-white.svg" alt="Театр Кочерги">
@@ -45,213 +44,100 @@
     </div>
 </header>
 
-<!-- HERO SECTION -->
-<section class="hero">
-    <img src="img/main.png" alt="Головна сторінка" class="main-image">
-
-    <!-- Лівий блок: підписка -->
-    <div class="hero-subscribe">
-        <div class="subscribe-icon">
-            <img src="svg/setting_fill.svg" alt="setting fill">
-        </div>
-        <p class="subscribe-title">ПІДПИШИСЬ</p>
-        <p class="subscribe-text">Будь першим,<br>щоб бачити<br>головне</p>
-    </div>
-
-    <!-- Центральний play-button -->
-    <div class="hero-play">
-        <img src="img/play.png" alt="play">
-    </div>
-
-    <!-- Картка вистави (права частина) -->
-    <div class="hero-show-card">
-        <h3 class="show-card-title">ЛІТЕПЛО</h3>
-        <p class="show-card-text">
-            Це історія не про минуле.<br>
-            Це історія про нас.<br>
-            Ми — нащадки тих, хто вистояв.
+<section class="hero" style="padding-bottom: 0;">
+    <img src="img/life-behing-a-curtain.png" alt="">
+    <div class="meanless-phrase">
+        <h3>БІЛЬШЕ НІЖ СЦЕНА</h3>
+        <p>
+            Театр Кочерги — це живий простір, де кожен елемент працює на спільний зміст. Тут новини стають частиною
+            нашої історії, а правила візиту допомагають вам налаштувати фокус на головне. Ми відкриваємо завісу над
+            нашими буднями та запрошуємо таланти стати частиною команди. Дізнайтеся, як живе наш театр поза межами
+            вистав та як ви можете долучитися до створення магії.
         </p>
     </div>
-
-    <!-- Нижній лівий: цитата -->
-    <div class="hero-quote">
-        <span class="quote-tag">ІСТИНА</span>
-        <p class="quote-text">
-            Немає в світі бурі,<br>
-            щоб огонь могла<br>
-            задути правдивий
-        </p>
-        <p class="quote-author">Драматург,<br>Іван Кочерга</p>
-    </div>
-
-    <!-- Великий заголовок -->
-    <div class="hero-headline"><h1 class="headline-text headline-top">БАЧИТИ</h1>
-        <div class="headline-bottom"><h2 class="headline-text headline-left"><span class="headline-arrow"><img src="svg/vector.svg" alt="↗"></span>ГОЛОВНЕ
-        </h2> <a href="#" class="headline-btn" aria-label="Перейти">
+    <div class="hero-headline" style="display: block; bottom: 0; right: 324px;"><h1 class="headline-text headline-top"
+                                                          style='margin-left: 90px; text-align: left;'>ЖИТТЯ</h1>
+        <div class="headline-bottom"><a href="#" class="headline-btn" aria-label="Перейти">
             <img src="svg/vector-right-down.svg" alt="">
-        </a></div>
+        </a>
+            <h2 class="headline-text headline-left">ЗА ЗАВІСОЮ
+            </h2></div>
     </div>
 </section>
 
-<section class="repertoire">
-    <div class="swiper repertoire-slider">
-        <div class="swiper-wrapper">
+<div class="page">
 
-            <div class="swiper-slide active">
-                <div class="repertoire-date-card">
-                    <div class="date-line">
-                        <span class="day">24</span>
-                        <span class="month">БЕРЕЗНЯ</span>
-                    </div>
-                    <div class="label">ЗАВТРА</div>
-                </div>
+    <aside class="sidebar">
+        <nav class="sidebar__nav" aria-label="Розділи сайту">
+
+            <div class="sidebar__item is-active">
+                <a class="sidebar__link" href="#">
+                    Історія театру
+                    <img class="sidebar__icon" src="svg/vector_rep_active.svg" alt="">
+                </a>
             </div>
 
-            <div class="swiper-slide">
-                <div class="repertoire-date-card">
-                    <div class="date-line">
-                        <span class="day">25</span>
-                        <span class="month">БЕРЕЗНЯ</span>
-                    </div>
-                    <div class="label">ПН</div>
-                </div>
+            <div class="sidebar__item ">
+                <a class="sidebar__link" href="#" aria-current="page">
+                    Архітектура
+                    <img class="sidebar__icon" src="svg/vector_rep_not_active.svg" alt="">
+                </a>
+<!--                <ul class="sidebar__submenu">-->
+<!--                    <li><a href="#">Будівля театру</a></li>-->
+<!--                    <li><a href="#">Технічні характеристики</a></li>-->
+<!--                    <li><a href="#">Галерея</a></li>-->
+<!--                </ul>-->
             </div>
 
-            <div class="swiper-slide">
-                <div class="repertoire-date-card">
-                    <div class="date-line">
-                        <span class="day">26</span>
-                        <span class="month">БЕРЕЗНЯ</span>
-                    </div>
-                    <div class="label">ВТ</div>
-                </div>
+            <div class="sidebar__item">
+                <a class="sidebar__link" href="#">
+                    Доступ до інформації
+                    <img class="sidebar__icon" src="svg/vector_rep_not_active.svg" alt="">
+                </a>
             </div>
-            <div class="swiper-slide">
-                <div class="repertoire-date-card">
-                    <div class="date-line">
-                        <span class="day">26</span>
-                        <span class="month">БЕРЕЗНЯ</span>
-                    </div>
-                    <div class="label">ВТ</div>
-                </div>
+
+            <div class="sidebar__item">
+                <a class="sidebar__link" href="#">
+                    Вакансії
+                    <img class="sidebar__icon" src="svg/vector_rep_not_active.svg" alt="">
+                </a>
             </div>
-            <div class="swiper-slide">
-                <div class="repertoire-date-card">
-                    <div class="date-line">
-                        <span class="day">26</span>
-                        <span class="month">БЕРЕЗНЯ</span>
-                    </div>
-                    <div class="label">ВТ</div>
-                </div>
+
+            <div class="sidebar__item">
+                <a class="sidebar__link" href="#">
+                    Правила
+                    <img class="sidebar__icon" src="svg/vector_rep_not_active.svg" alt="">
+                </a>
             </div>
-            <div class="swiper-slide">
-                <div class="repertoire-date-card">
-                    <div class="date-line">
-                        <span class="day">26</span>
-                        <span class="month">БЕРЕЗНЯ</span>
-                    </div>
-                    <div class="label">ВТ</div>
-                </div>
+
+            <div class="sidebar__item">
+                <a class="sidebar__link" href="#">
+                    Новини
+                    <!-- за макетом цей пункт завжди з "активною" стрілкою, навіть у сірому стані -->
+                    <img class="sidebar__icon" src="svg/vector_rep_active.svg" alt="">
+                </a>
             </div>
-            <div class="swiper-slide">
-                <div class="repertoire-date-card">
-                    <div class="date-line">
-                        <span class="day">26</span>
-                        <span class="month">БЕРЕЗНЯ</span>
-                    </div>
-                    <div class="label">ВТ</div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="repertoire-date-card">
-                    <div class="date-line">
-                        <span class="day">26</span>
-                        <span class="month">БЕРЕЗНЯ</span>
-                    </div>
-                    <div class="label">ВТ</div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="repertoire-date-card">
-                    <div class="date-line">
-                        <span class="day">26</span>
-                        <span class="month">БЕРЕЗНЯ</span>
-                    </div>
-                    <div class="label">ВТ</div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="repertoire__tabs">
-        <p class="repertoire__text">
-            ПОБАЧ <span class="highlight-red">ГОЛОВНЕ</span> ДЛЯ СЕБЕ <br>
-            ПОСЕРЕД ЗВИЧНОГО ДНЯ
-        </p>
+
+        </nav>
+    </aside>
+
+    <div class="article-col">
+        <article>
+            <h1>Історія театру</h1>
+
+            <p>Житомир має давні театральні традиції і на початку ХІХ століття, він був одним із небагатьох міст, у якому уже існував професійний театр. Протягом усієї своєї сценічної історії колектив Житомирського театру ім. Івана Кочерги прагне, щоб «Житомирський театр» завжди був одним з найкращих в Україні. Цьому свідчить його багата творча біографія, вагомий внесок в яку зробили корифеї нашого театру, і здобутки та перемоги нинішнього творчого колективу.</p>
+
+            <p>Запрошуємо житомирян і гостей нашого міста на вистави Житомирського академічного українського музично-драматичного театру ім. І. Кочерги!</p>
+
+            <p>Шалені емоції дістануться саме тобі!</p>
+            <br>
+            <br>
+
+            <img src="img/history-of-theatre.png" alt="">
+        </article>
     </div>
 
-    <div class="repertoire__list">
-
-        <article class="repertoire-card active">
-            <img src="img/1.png" alt="">
-
-            <div class="repertoire-card__overlay"></div>
-
-            <div class="repertoire-card__content">
-                <h3>ЗА ДВОМА ЗАЙЦЯМИ</h3>
-
-                <p>
-                    Він був «інста-блогером» ще до того,
-                    як винайшли інтернет. Голохвостов.
-                    Людина-бренд, за якою — тотальна порожнеча.
-                </p>
-
-                <div class="repertoire-card__bottom">
-                    <div class="repertoire-card__meta">
-                        <span><img src="svg/clock.svg" alt="">12h 23min</span>
-                        <span><img src="svg/scene.svg" alt="">1 сцена</span>
-                    </div>
-
-                    <a href="#" class="repertoire-card__btn">Детальніше</a>
-                </div>
-            </div>
-        </article>
-
-        <article class="repertoire-card">
-            <img src="img/2.png" alt="">
-
-            <div class="repertoire-card__overlay"></div>
-
-            <div class="repertoire-card__content">
-                <h3>ЗА ДВОМА ЗАЙЦЯМИ</h3>
-            </div>
-        </article>
-
-        <article class="repertoire-card">
-            <img src="img/3.png" alt="">
-
-            <div class="repertoire-card__overlay"></div>
-
-            <div class="repertoire-card__content">
-                <h3>ЗА ДВОМА ЗАЙЦЯМИ</h3>
-            </div>
-        </article>
-
-        <article class="repertoire-card">
-            <img src="img/4.png" alt="">
-
-            <div class="repertoire-card__overlay"></div>
-
-            <div class="repertoire-card__content">
-                <h3>ЗА ДВОМА ЗАЙЦЯМИ</h3>
-            </div>
-        </article>
-
-    </div>
-
-    <a href="#" class="repertoire__all">
-        Дивитись весь репертуар <img src="svg/vector_red.svg" alt="">
-    </a>
-</section>
+</div>
 
 <div class="theater-stage">
 
@@ -401,6 +287,6 @@
         <p>© 2026 — ЖИТОМИРСЬКИЙ АКАДЕМІЧНИЙ УКРАЇНСЬКИЙ МУЗИЧНО-ДРАМАТИЧНИЙ ТЕАТР ІМЕНІ ІВАНА КОЧЕРГИ</p>
     </div>
 </footer>
+
 </body>
-<script src="scripts/date.js"></script>
 </html>
