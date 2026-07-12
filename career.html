@@ -14,15 +14,12 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <style>
-    .page article div{
-        margin-top: 0;
-        display: flex;
-        border-radius: 0;
-        overflow: unset;
-        background: none;
-
+    .theater-person{
+        bottom: 50px;
     }
-
+    .theater-person p {
+        font-size: 18px;
+    }
 
 </style>
 <body>
@@ -57,138 +54,35 @@
 </header>
 
 <section class="hero" style="padding-bottom: 0;">
-    <img src="img/life-behing-a-curtain.png" alt="">
-    <div class="meanless-phrase">
-        <h3>БІЛЬШЕ НІЖ СЦЕНА</h3>
-        <p>
-            Театр Кочерги — це живий простір, де кожен елемент працює на спільний зміст. Тут новини стають частиною
-            нашої історії, а правила візиту допомагають вам налаштувати фокус на головне. Ми відкриваємо завісу над
-            нашими буднями та запрошуємо таланти стати частиною команди. Дізнайтеся, як живе наш театр поза межами
-            вистав та як ви можете долучитися до створення магії.
-        </p>
+    <div style="position: relative; width: 50%; display: inline-block;">
+        <img src="img/person.png" alt="Головна сторінка" style="width: 100%; display: block;">
+        <div style="position:absolute; bottom:0; left:0; width:100%; height:30%; background:linear-gradient(to top, rgba(0,0,0,0.95), transparent); pointer-events:none;"></div>
     </div>
-    <div class="hero-headline" style="display: block; bottom: 0; right: 324px;"><h1 class="headline-text headline-top"
-                                                                                    style='margin-left: 90px; text-align: left;'>ЖИТТЯ</h1>
-        <div class="headline-bottom"><a href="#" class="headline-btn" aria-label="Перейти">
-            <img src="svg/vector-right-down.svg" alt="">
-        </a>
-            <h2 class="headline-text headline-left">ЗА ЗАВІСОЮ
-            </h2></div>
+
+    <div class="theater-person">
+        <h1>Головний художник</h1>
+        <h3>Кваліфікаційні вимоги:</h3>
+        <p class="career-desc">повна вища освіта відповідного напряму підготовки (магістр, спеціаліст). Післядипломна освіта в галузі управління. Стаж роботи за професією художника не менше 3 років</p>
+
+        <h3>Документи подавати за адресою:</h3>
+        <p>м. Житомир, площа Соборна, 6</p>
+
+        <h3>Кінцевий строк прийняття документів: 18 лютого 2026 р.</h3>
+
+        <h3>Перелік документів, що подаються претендентами для участі у конкурсі:</h3>
+        <ul>
+            <li>заява про участь в конкурсі у довільній формі.</li>
+            <li>особовий листок з обліку кадрів з вклеєною фотокарткою;</li>
+            <li>копія документа, що посвідчує особу;</li>
+            <li>копія трудової книжки (за наявності);</li>
+            <li>копія документа про освіту за відповідною спеціальністю;</li>
+            <li>інша додаткова інформація.</li>
+        </ul>
+
+        <h3>Дата і місце проведення конкурсу буде повідомлено претендентам особисто.</h3>
     </div>
+
 </section>
-
-<div class="page">
-
-    <aside class="sidebar">
-        <nav class="sidebar__nav" aria-label="Розділи сайту">
-
-            <div class="sidebar__item">
-                <a class="sidebar__link" href="#">
-                    Історія театру
-                    <img class="sidebar__icon" src="svg/vector_rep_not_active.svg" alt="">
-                </a>
-            </div>
-
-            <div class="sidebar__item is-active">
-                <a class="sidebar__link" href="#" aria-current="page">
-                    Архітектура
-                    <img class="sidebar__icon" src="svg/vector_rep_active.svg" alt="">
-                </a>
-                <ul class="sidebar__submenu">
-                    <li><a href="#">Будівля театру</a></li>
-                    <li><a href="#">Технічні характеристики</a></li>
-                    <li><a href="#">Галерея</a></li>
-                </ul>
-            </div>
-
-            <div class="sidebar__item">
-                <a class="sidebar__link" href="#">
-                    Доступ до інформації
-                    <img class="sidebar__icon" src="svg/vector_rep_not_active.svg" alt="">
-                </a>
-            </div>
-
-            <div class="sidebar__item">
-                <a class="sidebar__link" href="#">
-                    Вакансії
-                    <img class="sidebar__icon" src="svg/vector_rep_not_active.svg" alt="">
-                </a>
-            </div>
-
-            <div class="sidebar__item">
-                <a class="sidebar__link" href="#">
-                    Правила
-                    <img class="sidebar__icon" src="svg/vector_rep_not_active.svg" alt="">
-                </a>
-            </div>
-
-            <div class="sidebar__item">
-                <a class="sidebar__link" href="#">
-                    Новини
-                    <!-- за макетом цей пункт завжди з "активною" стрілкою, навіть у сірому стані -->
-                    <img class="sidebar__icon" src="svg/vector_rep_active.svg" alt="">
-                </a>
-            </div>
-
-        </nav>
-    </aside>
-
-    <div class="article-col">
-        <article>
-            <h1>ГАЛЕРЕЯ</h1>
-
-            <section class="banner-slider">
-
-                <div class="banner-slider__top">
-    <span class="banner-slider__counter">
-      <span class="js-bs-current">01</span>/<span class="js-bs-total">10</span>
-    </span>
-                    <div class="banner-slider__progress js-bs-progress"></div>
-                </div>
-
-                <div class="swiper banner-slider__swiper">
-                    <div class="swiper-wrapper">
-
-                        <div class="swiper-slide banner-slider__slide">
-                            <img src="img/poster_1.png" alt="">
-                        </div>
-                        <div class="swiper-slide banner-slider__slide">
-                            <img src="img/poster_2.png" alt="">
-                        </div>
-                        <div class="swiper-slide banner-slider__slide">
-                            <img src="img/poster_3.png" alt="">
-                        </div>
-                        <div class="swiper-slide banner-slider__slide">
-                            <img src="img/poster_1.png" alt="">
-                        </div>
-                        <div class="swiper-slide banner-slider__slide">
-                            <img src="img/poster_2.png" alt="">
-                        </div>
-                        <div class="swiper-slide banner-slider__slide">
-                            <img src="img/poster_3.png" alt="">
-                        </div>
-                        <div class="swiper-slide banner-slider__slide">
-                            <img src="img/poster_1.png" alt="">
-                        </div>
-                        <div class="swiper-slide banner-slider__slide">
-                            <img src="img/poster_2.png" alt="">
-                        </div>
-                        <div class="swiper-slide banner-slider__slide">
-                            <img src="img/poster_3.png" alt="">
-                        </div>
-                        <div class="swiper-slide banner-slider__slide">
-                            <img src="img/poster_1.png" alt="">
-                        </div>
-
-                    </div>
-                </div>
-
-            </section>
-        </article>
-        <button class="show-more"><img src="svg/show-more.svg" alt="">ПОКАЗАТИ ЩЕ...</button>
-    </div>
-
-</div>
 
 <div class="theater-stage">
 
@@ -338,7 +232,7 @@
         <p>© 2026 — ЖИТОМИРСЬКИЙ АКАДЕМІЧНИЙ УКРАЇНСЬКИЙ МУЗИЧНО-ДРАМАТИЧНИЙ ТЕАТР ІМЕНІ ІВАНА КОЧЕРГИ</p>
     </div>
 </footer>
-
 </body>
+<script src="scripts/posters.js"></script>
 <script src="scripts/posters.js"></script>
 </html>

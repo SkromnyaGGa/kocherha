@@ -13,18 +13,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
-<style>
-    .page article div{
-        margin-top: 0;
-        display: flex;
-        border-radius: 0;
-        overflow: unset;
-        background: none;
-
-    }
-
-
-</style>
 <body>
 <header class="site-header">
     <div class="logo">
@@ -50,145 +38,217 @@
         <button class="icon-btn search-btn" aria-label="Пошук">
             <img src="svg/search.svg" alt="Пошук">
         </button>
-        <button class="icon-btn profile-btn" aria-label="Профіль користувача">
-            <img src="svg/user.svg" alt="Профіль користувача">
+        <button class="icon-btn profile-btn" aria-label="Профіль користувача" style="background:red;">
+            <img src="svg/user.svg" alt="Профіль користувача" style="filter: brightness(0) invert(1);">
         </button>
     </div>
 </header>
 
 <section class="hero" style="padding-bottom: 0;">
-    <img src="img/life-behing-a-curtain.png" alt="">
-    <div class="meanless-phrase">
-        <h3>БІЛЬШЕ НІЖ СЦЕНА</h3>
-        <p>
-            Театр Кочерги — це живий простір, де кожен елемент працює на спільний зміст. Тут новини стають частиною
-            нашої історії, а правила візиту допомагають вам налаштувати фокус на головне. Ми відкриваємо завісу над
-            нашими буднями та запрошуємо таланти стати частиною команди. Дізнайтеся, як живе наш театр поза межами
-            вистав та як ви можете долучитися до створення магії.
-        </p>
+    <div style="position: relative; width: 50%; display: inline-block;">
+        <img src="img/person.png" alt="Головна сторінка" style="width: 100%; display: block;">
+        <div style="position:absolute; bottom:0; left:0; width:100%; height:30%; background:linear-gradient(to top, rgba(0,0,0,0.95), transparent); pointer-events:none;"></div>
     </div>
-    <div class="hero-headline" style="display: block; bottom: 0; right: 324px;"><h1 class="headline-text headline-top"
-                                                                                    style='margin-left: 90px; text-align: left;'>ЖИТТЯ</h1>
-        <div class="headline-bottom"><a href="#" class="headline-btn" aria-label="Перейти">
+    <div class="hero-headline" style="    right: 160px;
+    bottom: 35px;"><h1 class="headline-text headline-top">БАЧИТИ</h1>
+        <div class="headline-bottom"><h2 class="headline-text headline-left"><span class="headline-arrow"><img
+                src="svg/vector.svg" alt="↗"></span>ГОЛОВНЕ
+        </h2> <a href="#" class="headline-btn" aria-label="Перейти">
             <img src="svg/vector-right-down.svg" alt="">
-        </a>
-            <h2 class="headline-text headline-left">ЗА ЗАВІСОЮ
-            </h2></div>
+        </a></div>
+    </div>
+
+    <div class="theater-person" style="bottom: 500px;">
+        <div class="year-of-birth" style="right:unset;left:255%;">
+            <img src="svg/account-edit.svg" alt="">
+        </div>
+        <h1>Заведія Олена</h1>
+        <div class="user-info">
+            <div class="user-phone-number">
+                <img src="svg/phone-return.svg" alt="">093 000 0000
+            </div>
+
+            <div class="user-email-address">
+                <img src="svg/user-email.svg" alt="">USERNAME@POST.COM
+            </div>
+
+            <div class="user-telegram">
+                <img src="svg/telegram.svg" alt="">@USERNAME
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section class="team" style="margin-top: unset;">
+    <div class="swiper repertoire-slider">
+        <div class="swiper-wrapper" style="gap: 20px">
+
+
+            <div class="swiper-slide active" style="width: 350px!important;">
+                <div class="repertoire-date-card">
+                    <div class="date-line">
+                        <span class="day" style="display:inline-flex; align-items:center; gap:8px;">ДЕ Я ВЖЕ БУВ <img src="svg/vector_rep_active.svg" alt="" style="display:block;"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide" style="width: 250px!important;">
+                <div class="repertoire-date-card">
+                    <div class="date-line">
+                        <span class="day" style="display:inline-flex; align-items:center; gap:8px;">ОЧІКУЮ <img src="svg/vector_rep_not_active.svg" alt="" style="display:block;"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide" style="width: 350px!important;">
+                <div class="repertoire-date-card">
+                    <div class="date-line">
+                        <span class="day" style="display:inline-flex; align-items:center; gap:8px;">КУДИ ХОЧУ ПІТИ <img src="svg/vector_rep_not_active.svg" alt="" style="display:block;"></span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <script src="scripts/posters.js"></script>
+        <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const slides = document.querySelectorAll(".repertoire-slider .swiper-slide");
+
+        slides.forEach((slide) => {
+            slide.addEventListener("click", () => {
+                slides.forEach((s) => {
+                    const isActive = s === slide;
+                    s.classList.toggle("active", isActive);
+
+                    const icon = s.querySelector(".day img");
+                    if (icon) {
+                        icon.src = isActive
+                            ? "svg/vector_rep_active.svg"
+                            : "svg/vector_rep_not_active.svg";
+                    }
+                });
+            });
+        });
+    });
+</script>
+
     </div>
 </section>
 
-<div class="page">
+<section class="repertoire" style="max-width: 98%; margin: 0 auto;">
+    <div class="repertoire__list">
 
-    <aside class="sidebar">
-        <nav class="sidebar__nav" aria-label="Розділи сайту">
+        <article class="repertoire-card">
+            <img src="img/1.png" alt="">
 
-            <div class="sidebar__item">
-                <a class="sidebar__link" href="#">
-                    Історія театру
-                    <img class="sidebar__icon" src="svg/vector_rep_not_active.svg" alt="">
-                </a>
+            <div class="repertoire-card__overlay"></div>
+            <div class="repertoire-card__content">
+                <h3>ЗА ДВОМА ЗАЙЦЯМИ</h3>
             </div>
-
-            <div class="sidebar__item is-active">
-                <a class="sidebar__link" href="#" aria-current="page">
-                    Архітектура
-                    <img class="sidebar__icon" src="svg/vector_rep_active.svg" alt="">
-                </a>
-                <ul class="sidebar__submenu">
-                    <li><a href="#">Будівля театру</a></li>
-                    <li><a href="#">Технічні характеристики</a></li>
-                    <li><a href="#">Галерея</a></li>
-                </ul>
-            </div>
-
-            <div class="sidebar__item">
-                <a class="sidebar__link" href="#">
-                    Доступ до інформації
-                    <img class="sidebar__icon" src="svg/vector_rep_not_active.svg" alt="">
-                </a>
-            </div>
-
-            <div class="sidebar__item">
-                <a class="sidebar__link" href="#">
-                    Вакансії
-                    <img class="sidebar__icon" src="svg/vector_rep_not_active.svg" alt="">
-                </a>
-            </div>
-
-            <div class="sidebar__item">
-                <a class="sidebar__link" href="#">
-                    Правила
-                    <img class="sidebar__icon" src="svg/vector_rep_not_active.svg" alt="">
-                </a>
-            </div>
-
-            <div class="sidebar__item">
-                <a class="sidebar__link" href="#">
-                    Новини
-                    <!-- за макетом цей пункт завжди з "активною" стрілкою, навіть у сірому стані -->
-                    <img class="sidebar__icon" src="svg/vector_rep_active.svg" alt="">
-                </a>
-            </div>
-
-        </nav>
-    </aside>
-
-    <div class="article-col">
-        <article>
-            <h1>ГАЛЕРЕЯ</h1>
-
-            <section class="banner-slider">
-
-                <div class="banner-slider__top">
-    <span class="banner-slider__counter">
-      <span class="js-bs-current">01</span>/<span class="js-bs-total">10</span>
-    </span>
-                    <div class="banner-slider__progress js-bs-progress"></div>
-                </div>
-
-                <div class="swiper banner-slider__swiper">
-                    <div class="swiper-wrapper">
-
-                        <div class="swiper-slide banner-slider__slide">
-                            <img src="img/poster_1.png" alt="">
-                        </div>
-                        <div class="swiper-slide banner-slider__slide">
-                            <img src="img/poster_2.png" alt="">
-                        </div>
-                        <div class="swiper-slide banner-slider__slide">
-                            <img src="img/poster_3.png" alt="">
-                        </div>
-                        <div class="swiper-slide banner-slider__slide">
-                            <img src="img/poster_1.png" alt="">
-                        </div>
-                        <div class="swiper-slide banner-slider__slide">
-                            <img src="img/poster_2.png" alt="">
-                        </div>
-                        <div class="swiper-slide banner-slider__slide">
-                            <img src="img/poster_3.png" alt="">
-                        </div>
-                        <div class="swiper-slide banner-slider__slide">
-                            <img src="img/poster_1.png" alt="">
-                        </div>
-                        <div class="swiper-slide banner-slider__slide">
-                            <img src="img/poster_2.png" alt="">
-                        </div>
-                        <div class="swiper-slide banner-slider__slide">
-                            <img src="img/poster_3.png" alt="">
-                        </div>
-                        <div class="swiper-slide banner-slider__slide">
-                            <img src="img/poster_1.png" alt="">
-                        </div>
-
-                    </div>
-                </div>
-
-            </section>
         </article>
-        <button class="show-more"><img src="svg/show-more.svg" alt="">ПОКАЗАТИ ЩЕ...</button>
-    </div>
 
-</div>
+        <article class="repertoire-card">
+            <img src="img/2.png" alt="">
+
+            <div class="repertoire-card__overlay"></div>
+
+            <div class="repertoire-card__content">
+                <h3>ЗА ДВОМА ЗАЙЦЯМИ</h3>
+            </div>
+        </article>
+
+        <article class="repertoire-card active">
+            <img src="img/3.png" alt="">
+
+            <div class="repertoire-card__overlay"></div>
+
+            <div class="repertoire-card__content">
+                <h3>ЗА ДВОМА ЗАЙЦЯМИ</h3>
+
+                <p>
+                    Він був «інста-блогером» ще до того,
+                    як винайшли інтернет. Голохвостов.
+                    Людина-бренд, за якою — тотальна порожнеча.
+                </p>
+
+                <div class="repertoire-card__bottom">
+                    <div class="repertoire-card__meta">
+                        <span><img src="svg/clock.svg" alt="">12h 23min</span>
+                        <span><img src="svg/scene.svg" alt="">1 сцена</span>
+                    </div>
+
+                    <a href="#" class="repertoire-card__btn">Детальніше</a>
+                </div>
+                <a href="#" class="cta-button"><img src="svg/ticket.svg" alt="">Квитки</a>
+            </div>
+        </article>
+
+        <article class="repertoire-card">
+            <img src="img/4.png" alt="">
+
+            <div class="repertoire-card__overlay"></div>
+
+            <div class="repertoire-card__content">
+                <h3>ЗА ДВОМА ЗАЙЦЯМИ</h3>
+            </div>
+        </article>
+        <article class="repertoire-card active">
+            <img src="img/1.png" alt="">
+
+            <div class="repertoire-card__overlay"></div>
+            <div class="repertoire-card__content">
+                <h3>ЗА ДВОМА ЗАЙЦЯМИ</h3>
+
+                <p>
+                    Він був «інста-блогером» ще до того,
+                    як винайшли інтернет. Голохвостов.
+                    Людина-бренд, за якою — тотальна порожнеча.
+                </p>
+
+                <div class="repertoire-card__bottom">
+                    <div class="repertoire-card__meta">
+                        <span><img src="svg/clock.svg" alt="">12h 23min</span>
+                        <span><img src="svg/scene.svg" alt="">1 сцена</span>
+                    </div>
+
+                    <a href="#" class="repertoire-card__btn">Детальніше</a>
+                </div>
+                <a href="#" class="cta-button"><img src="svg/ticket.svg" alt="">Квитки</a>
+            </div>
+        </article>
+
+        <article class="repertoire-card">
+            <img src="img/2.png" alt="">
+
+            <div class="repertoire-card__overlay"></div>
+
+            <div class="repertoire-card__content">
+                <h3>ЗА ДВОМА ЗАЙЦЯМИ</h3>
+            </div>
+        </article>
+
+        <article class="repertoire-card">
+            <img src="img/3.png" alt="">
+
+            <div class="repertoire-card__overlay"></div>
+            <div class="repertoire-card__content">
+                <h3>ЗА ДВОМА ЗАЙЦЯМИ</h3>
+            </div>
+
+        </article>
+
+        <article class="repertoire-card">
+            <img src="img/4.png" alt="">
+
+            <div class="repertoire-card__overlay"></div>
+
+            <div class="repertoire-card__content">
+                <h3>ЗА ДВОМА ЗАЙЦЯМИ</h3>
+            </div>
+        </article>
+    </div>
+</section>
 
 <div class="theater-stage">
 
@@ -338,7 +398,7 @@
         <p>© 2026 — ЖИТОМИРСЬКИЙ АКАДЕМІЧНИЙ УКРАЇНСЬКИЙ МУЗИЧНО-ДРАМАТИЧНИЙ ТЕАТР ІМЕНІ ІВАНА КОЧЕРГИ</p>
     </div>
 </footer>
-
 </body>
+<script src="scripts/posters.js"></script>
 <script src="scripts/posters.js"></script>
 </html>

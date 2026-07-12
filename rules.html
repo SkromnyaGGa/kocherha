@@ -13,18 +13,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
-<style>
-    .page article div{
-        margin-top: 0;
-        display: flex;
-        border-radius: 0;
-        overflow: unset;
-        background: none;
-
-    }
-
-
-</style>
 <body>
 <header class="site-header">
     <div class="logo">
@@ -89,16 +77,16 @@
                 </a>
             </div>
 
-            <div class="sidebar__item is-active">
+            <div class="sidebar__item ">
                 <a class="sidebar__link" href="#" aria-current="page">
                     Архітектура
-                    <img class="sidebar__icon" src="svg/vector_rep_active.svg" alt="">
+                    <img class="sidebar__icon" src="svg/vector_rep_not_active.svg" alt="">
                 </a>
-                <ul class="sidebar__submenu">
-                    <li><a href="#">Будівля театру</a></li>
-                    <li><a href="#">Технічні характеристики</a></li>
-                    <li><a href="#">Галерея</a></li>
-                </ul>
+                <!--                <ul class="sidebar__submenu">-->
+                <!--                    <li><a href="#">Будівля театру</a></li>-->
+                <!--                    <li><a href="#">Технічні характеристики</a></li>-->
+                <!--                    <li><a href="#">Галерея</a></li>-->
+                <!--                </ul>-->
             </div>
 
             <div class="sidebar__item">
@@ -115,10 +103,10 @@
                 </a>
             </div>
 
-            <div class="sidebar__item">
+            <div class="sidebar__item is-active">
                 <a class="sidebar__link" href="#">
                     Правила
-                    <img class="sidebar__icon" src="svg/vector_rep_not_active.svg" alt="">
+                    <img class="sidebar__icon" src="svg/vector_rep_active.svg" alt="">
                 </a>
             </div>
 
@@ -135,57 +123,28 @@
 
     <div class="article-col">
         <article>
-            <h1>ГАЛЕРЕЯ</h1>
+            <h2 style="max-width: 32%">ПРАВИЛА ПРИДБАННЯ ТА ПОВЕРНЕННЯ КВИТКІВ</h2>
+            <h3>Купуючи чи отримуючи квиток на виставу, відвідувачі театру автоматично погоджуються виконувати усі правила та інструкції, встановлені в театрі:</h3>
+            <ul>
+                <li>Кожен відвідувач повинен мати окремий квиток незалежно від віку;</li>
+                <li>Перевіряйте інформацію, зазначену в квитку, не відходячи від каси;</li>
+                <li>Квитки повертаються у разі відміни або зміни вистави;</li>
+                <li>За попередньо продані квитки гроші повертаються не пізніше, ніж за годину до початку вистави;</li>
+                <li>Адміністрація не несе відповідальності за підроблені квитки, претензії щодо підроблених квитків не розглядаються;</li>
+                <li>Каса квиткового театру працює з 11:00 до 19:00 (тех. перерва – з 15:00 до 15:30). Вихідні дні – неділя, понеділок. (0412) 47-33-88;</li>
+                <li>За годину до початку вистави (з 18:00 до 19:00 – вечірньої та з 11:00 до 12:00 – денної) квитки продаються тільки на поточну виставу;</li>
+                <li>Замовлення квитків з послідуючим викупом у касі театру за телефонами каси: 47-33-88 або у розповсюджувачів квитків. Бронь повинна бути викуплена у касі театру не пізніше, ніж за 45 хв. до вистави. Не викуплені квитки знімаються з броні та надходять у вільний продаж.</li>
+            </ul>
 
-            <section class="banner-slider">
+            <h3>ПРИ БРОНЮВАННІ ТА ПРИДБАННІ КВИТКІВ НА САЙТІ ПРОСИМО ЗВЕРНУТИ УВАГУ НА НАСТУПНЕ:</h3>
+            <p style="font-weight: 500">1. Електронні квитки повернення та обміну не підлягають.<br>
+                2. Електронні квитки дають право на відвідування вистави так само, як і звичайні квитки.<br>
+                3. Бронь зберігається протягом 48 годин після замовлення.<br>
+                4. Викуплені забронювані квитки можна виключно в касах, зазначених в e-mail, яким підтверджено резерв.<br>
+                5. Телефон тех. підтримки при оформленні квитків на сайті 0412-22-24-55, 47-33-94,47-33-88 (щодня з 10:00 до 19:00); e-mail: teatr_kochergi@ukr.net</p>
 
-                <div class="banner-slider__top">
-    <span class="banner-slider__counter">
-      <span class="js-bs-current">01</span>/<span class="js-bs-total">10</span>
-    </span>
-                    <div class="banner-slider__progress js-bs-progress"></div>
-                </div>
-
-                <div class="swiper banner-slider__swiper">
-                    <div class="swiper-wrapper">
-
-                        <div class="swiper-slide banner-slider__slide">
-                            <img src="img/poster_1.png" alt="">
-                        </div>
-                        <div class="swiper-slide banner-slider__slide">
-                            <img src="img/poster_2.png" alt="">
-                        </div>
-                        <div class="swiper-slide banner-slider__slide">
-                            <img src="img/poster_3.png" alt="">
-                        </div>
-                        <div class="swiper-slide banner-slider__slide">
-                            <img src="img/poster_1.png" alt="">
-                        </div>
-                        <div class="swiper-slide banner-slider__slide">
-                            <img src="img/poster_2.png" alt="">
-                        </div>
-                        <div class="swiper-slide banner-slider__slide">
-                            <img src="img/poster_3.png" alt="">
-                        </div>
-                        <div class="swiper-slide banner-slider__slide">
-                            <img src="img/poster_1.png" alt="">
-                        </div>
-                        <div class="swiper-slide banner-slider__slide">
-                            <img src="img/poster_2.png" alt="">
-                        </div>
-                        <div class="swiper-slide banner-slider__slide">
-                            <img src="img/poster_3.png" alt="">
-                        </div>
-                        <div class="swiper-slide banner-slider__slide">
-                            <img src="img/poster_1.png" alt="">
-                        </div>
-
-                    </div>
-                </div>
-
-            </section>
+            <h3 style="color: red;">ПІСЛЯ ЗДІЙСНЕННЯ ТРАНЗАКЦІЇ ЗГІДНО З "ІНСТРУКЦІЄЮ З ВЕДЕННЯ КВИТКОВОГО ГОСПОДАРСТВА В ТЕАТРАЛЬНО-ВИДОВИЩНИХ ПІДПРИЄМСТВАХ ТА КУЛЬТУРНО-ОСВІТНІХ ЗАКЛАДАХ", ЗАТВЕРДЖЕНОЮ МІНІСТЕРСТВОМ КУЛЬТУРИ УКРАЇНИ, ВІДВІДУВАЧІ МАЮТЬ ПРАВО ПОВЕРНУТИ КОШТИ ТІЛЬКИ У ВИПАДКУ СКАСУВАННЯ, ПЕРЕНОСУ АБО ЗАМІНИ ЗАХОДУ.</h3>
         </article>
-        <button class="show-more"><img src="svg/show-more.svg" alt="">ПОКАЗАТИ ЩЕ...</button>
     </div>
 
 </div>
@@ -340,5 +299,4 @@
 </footer>
 
 </body>
-<script src="scripts/posters.js"></script>
 </html>

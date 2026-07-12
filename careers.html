@@ -20,10 +20,23 @@
         border-radius: 0;
         overflow: unset;
         background: none;
-
     }
 
+    .repertoire-card__content {
+        flex-direction: column;
+    }
+    .cta-button {
+        padding: 4px 24px;
+        font-weight: 400;
+    }
 
+    .repertoire__list{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .repertoire-card__content h3{
+        line-height: 2;
+    }
 </style>
 <body>
 <header class="site-header">
@@ -89,7 +102,7 @@
                 </a>
             </div>
 
-            <div class="sidebar__item is-active">
+            <div class="sidebar__item">
                 <a class="sidebar__link" href="#" aria-current="page">
                     Архітектура
                     <img class="sidebar__icon" src="svg/vector_rep_active.svg" alt="">
@@ -108,7 +121,7 @@
                 </a>
             </div>
 
-            <div class="sidebar__item">
+            <div class="sidebar__item is-active">
                 <a class="sidebar__link" href="#">
                     Вакансії
                     <img class="sidebar__icon" src="svg/vector_rep_not_active.svg" alt="">
@@ -134,57 +147,78 @@
     </aside>
 
     <div class="article-col">
-        <article>
-            <h1>ГАЛЕРЕЯ</h1>
+        <section class="repertoire" style="padding-bottom: 100px;">
+            <div class="repertoire__list">
+                <article class="repertoire-card active">
+                    <img src="img/1.png" alt="">
 
-            <section class="banner-slider">
+                    <div class="repertoire-card__overlay"></div>
 
-                <div class="banner-slider__top">
-    <span class="banner-slider__counter">
-      <span class="js-bs-current">01</span>/<span class="js-bs-total">10</span>
-    </span>
-                    <div class="banner-slider__progress js-bs-progress"></div>
-                </div>
-
-                <div class="swiper banner-slider__swiper">
-                    <div class="swiper-wrapper">
-
-                        <div class="swiper-slide banner-slider__slide">
-                            <img src="img/poster_1.png" alt="">
-                        </div>
-                        <div class="swiper-slide banner-slider__slide">
-                            <img src="img/poster_2.png" alt="">
-                        </div>
-                        <div class="swiper-slide banner-slider__slide">
-                            <img src="img/poster_3.png" alt="">
-                        </div>
-                        <div class="swiper-slide banner-slider__slide">
-                            <img src="img/poster_1.png" alt="">
-                        </div>
-                        <div class="swiper-slide banner-slider__slide">
-                            <img src="img/poster_2.png" alt="">
-                        </div>
-                        <div class="swiper-slide banner-slider__slide">
-                            <img src="img/poster_3.png" alt="">
-                        </div>
-                        <div class="swiper-slide banner-slider__slide">
-                            <img src="img/poster_1.png" alt="">
-                        </div>
-                        <div class="swiper-slide banner-slider__slide">
-                            <img src="img/poster_2.png" alt="">
-                        </div>
-                        <div class="swiper-slide banner-slider__slide">
-                            <img src="img/poster_3.png" alt="">
-                        </div>
-                        <div class="swiper-slide banner-slider__slide">
-                            <img src="img/poster_1.png" alt="">
-                        </div>
+                    <div class="repertoire-card__content">
+                        <h3>Головний художник</h3>
+                        <a href="#" class="cta-button">Докладніше</a>
 
                     </div>
-                </div>
+                </article>
+                <article class="repertoire-card active">
+                    <img src="img/1.png" alt="">
 
-            </section>
-        </article>
+                    <div class="repertoire-card__overlay"></div>
+
+                    <div class="repertoire-card__content">
+                        <h3>Головний художник</h3>
+                        <a href="#" class="cta-button">Докладніше</a>
+
+                    </div>
+                </article>
+                <article class="repertoire-card active">
+                    <img src="img/1.png" alt="">
+
+                    <div class="repertoire-card__overlay"></div>
+
+                    <div class="repertoire-card__content">
+                        <h3>Головний художник</h3>
+                        <a href="#" class="cta-button">Докладніше</a>
+
+                    </div>
+                </article>
+                <article class="repertoire-card active">
+                    <img src="img/1.png" alt="">
+
+                    <div class="repertoire-card__overlay"></div>
+
+                    <div class="repertoire-card__content">
+                        <h3>Головний художник</h3>
+                        <a href="#" class="cta-button">Докладніше</a>
+
+                    </div>
+                </article>
+                <article class="repertoire-card active">
+                    <img src="img/1.png" alt="">
+
+                    <div class="repertoire-card__overlay"></div>
+
+                    <div class="repertoire-card__content">
+                        <h3>Головний художник</h3>
+                        <a href="#" class="cta-button">Докладніше</a>
+
+                    </div>
+                </article>
+                <article class="repertoire-card active">
+                    <img src="img/1.png" alt="">
+
+                    <div class="repertoire-card__overlay"></div>
+
+                    <div class="repertoire-card__content">
+                        <h3>Головний художник</h3>
+                        <a href="#" class="cta-button">Докладніше</a>
+
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
         <button class="show-more"><img src="svg/show-more.svg" alt="">ПОКАЗАТИ ЩЕ...</button>
     </div>
 
