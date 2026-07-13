@@ -80,8 +80,8 @@ body {
 }
 
 .icon-btn {
-    width: 54px;
-    height: 54px;
+    width: 56px;
+    height: 56px;
     border-radius: 50%;
     background-color: #ffffff;
     border: none;
@@ -89,7 +89,6 @@ body {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: transform 0.2s ease;
 }
 
 .icon-btn img {
@@ -105,7 +104,6 @@ body {
 }
 
 .icon-btn:hover {
-    transform: scale(1.05);
 }
 
 /* HEADER END */
@@ -119,6 +117,7 @@ body {
     width: 100%;
     overflow: hidden;
     padding-bottom: 235px;
+    max-height: 100vh;
 }
 
 .main-image {
@@ -333,7 +332,7 @@ body {
     text-align: center;
     left: 50%;
     transform: translateX(-50%);
-    top: 875px;
+    top: 80%;
 }
 
 .hero-single-title h2{
@@ -2472,4 +2471,400 @@ font-weight: bold;
         margin-top:20px;
     }
 
+}
+
+.person-socials{
+    position: absolute;
+    bottom: 58%;
+    left: 48.5%;
+    width: 79px;
+    height: 240px;
+}
+
+.contacts-wrapper {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+    width: 95%;
+    margin: auto;
+    padding-bottom: 3%;
+}
+
+.contacts-info {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contacts-item {
+    margin-bottom: 22px;
+}
+
+.contacts-item:last-child {
+    margin-bottom: 0;
+}
+
+.contacts-title {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.contacts-text {
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 14px;
+    font-weight: 400;
+}
+
+.contacts-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    height: 54px;
+    background: #ff1712;
+    border-radius: 999px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 800;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .25s;
+}
+
+.contacts-btn:hover {
+    background: #d9100c;
+}
+
+.contacts-btn img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.contacts-map {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 28px;
+    min-height: 450px;
+}
+
+.contacts-map iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.contacts-title,
+.contacts-text,
+.contacts-btn {
+    font-family: "Unbounded", sans-serif;
+}
+
+.show-more-red {
+    position: relative;
+    background: none;
+    border: 0;
+    padding: 0;
+    color: #ff0000;
+    font: lighter 28px/1 "Unbounded", sans-serif;
+    letter-spacing: -0.5px;
+    cursor: pointer;
+    transition: color .2s;
+    left: 80.5%;
+    transform: scale(0.98);
+}
+
+.show-more-red:hover {
+    color: #ff2b2b;
+}
+
+.show-more-red:active {
+    transform: scale(0.96);
+}
+
+.banner-slider.expanded .banner-slider__top {
+    display: none !important;
+}
+
+.banner-slider.expanded .banner-slider__swiper {
+    padding-inline-start: 0;
+    overflow: visible;
+}
+
+.banner-slider.expanded .swiper-wrapper {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    grid-template-rows: repeat(2, 1fr) !important;
+    gap: 20px;
+    transform: none !important;
+}
+
+.banner-slider.expanded .swiper-slide {
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+.mask{
+    position: absolute;
+    bottom: 65%;
+    right: 1%;
+}
+
+.change-img{
+    position: relative;
+    margin-top: -10%;
+}
+
+.auth-buttons {
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    gap: 10px;
+
+    font-size: 30px;
+    font-family: Unbounded, sans-serif;
+}
+
+.auth-buttons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid transparent;
+    border-radius: 60px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.auth-buttons .register {
+    width: 560px;
+    height: 120px;
+    background: red;
+}
+
+.auth-buttons .login {
+    width: 300px;
+    height: 120px;
+    border-color: white;
+}
+
+.action-buttons{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    width: 26%;
+    margin: auto;
+    padding-top: 0.1%;
+}
+
+.btn-ticket,
+.btn-icon{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:14px;
+    text-decoration:none;
+    transition:.2s;
+    box-sizing:border-box;
+}
+
+.btn-ticket{
+    width:282px;
+    height:56px;
+    background:#FF0000;
+    color:#fff;
+    font-family:'Unbounded', sans-serif;
+    font-size:18px;
+    font-weight:700;
+    gap:14px;
+}
+
+.btn-ticket img{
+    width:26px;
+    height:26px;
+    flex-shrink:0;
+}
+
+.btn-ticket:hover{
+    background:#d70000;
+}
+
+.btn-icon{
+    width:56px;
+    height:56px;
+    background:#161616;
+    border:1px solid #2b2b2b;
+    box-shadow:
+            inset 0 1px 0 rgba(255,255,255,.05),
+            0 2px 8px rgba(0,0,0,.35);
+}
+
+.btn-icon img{
+    width:24px;
+    height:24px;
+    transition:.2s;
+}
+
+.btn-icon:hover{
+    background:#202020;
+    border-color:#3a3a3a;
+}
+
+.btn-icon:hover img{
+    transform:scale(1.08);
+}
+
+.promo {
+    position: absolute;
+    top: 65%;
+    right: 2.5%;
+    display: flex;
+    align-items: center;
+    gap: 36px;
+
+    width: 520px;
+    height: 280px;
+    padding: 14px 32px 14px 14px;
+
+    background: #ffffff;
+    border-radius: 32px;
+}
+
+/* Фото зліва */
+.promo__photo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 230px;
+    max-height: 252px;
+    object-fit: cover;
+    border-radius: 18px;
+    flex-shrink: 0;
+}
+
+/* Текстовий блок справа */
+.promo__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+    min-width: 0;
+}
+
+.promo__title {
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 1.25;
+    color: #242026;
+    margin-bottom: 1px;
+}
+
+.promo__text {
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 450;
+    font-size: 12px;
+    line-height: 1.55;
+    color: #959595;
+    margin-bottom: 16px;
+}
+
+.promo__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height: 65px;
+
+    padding: 18px 28px;
+    border: 2px solid #000000;
+    border-radius: 999px;
+
+    font-family: 'Unbounded', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    color: #434343;
+    text-decoration: none;
+    white-space: nowrap;
+
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    margin-left: -8px;
+}
+
+.promo__btn:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.promo__btn:active {
+    transform: scale(0.98);
+}
+
+
+.search-box{
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 56px;
+    opacity: 0;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+
+    background: #fff;
+    border-radius: 50px;
+
+    transition:
+            width .35s ease,
+            opacity .25s ease;
+}
+
+.search-box.active{
+    width: 1520px; /* потрібна ширина */
+    opacity: 1;
+}
+
+.search-box input{
+    flex: 1;
+    height: 56px;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 0 20px;
+    font-size: 14px;
+    font-family: Unbounded, sans-serif;
+}
+
+.search-submit{
+    width: 56px;
+    height: 56px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    border-left: 1px solid #ddd;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-btn{
+    position: relative;
+    z-index: 2;
 }

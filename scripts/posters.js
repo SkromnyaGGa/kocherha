@@ -20,9 +20,11 @@ function setActiveDash(index) {
     currentEl.textContent = String(index + 1).padStart(2, '0');
 }
 
-const swiper = new Swiper('.banner-slider__swiper', {
+let swiper;
+
+const swiperOptions = {
     slidesPerView: 'auto',
-    spaceBetween: 0, // відступ заданий через margin-right у css (var(--bs-gap))
+    spaceBetween: 0,
     freeMode: {
         enabled: true,
         sticky: true,
@@ -38,4 +40,31 @@ const swiper = new Swiper('.banner-slider__swiper', {
             setActiveDash(sw.activeIndex);
         },
     },
+};
+
+swiper = new Swiper('.banner-slider__swiper', swiperOptions);
+
+const showMoreBtn = document.querySelector('.show-more-red');
+
+const showMoreBtn2 = document.querySelector('.show-more');
+
+showMoreBtn.addEventListener('click', () => {
+
+    if (!sliderRoot.classList.contains('expanded')) {
+
+        swiper.destroy(true, true);
+
+        sliderRoot.classList.add('expanded');
+        showMoreBtn.style.display = 'none';
+        showMoreBtn2.style.display = 'flex';
+    } else {
+
+        sliderRoot.classList.remove('expanded');
+
+        swiper = new Swiper('.banner-slider__swiper', swiperOptions);
+
+        showMoreBtn.textContent = 'Розгорнути всі...';
+        showMoreBtn2.style.display = 'none';
+    }
+
 });

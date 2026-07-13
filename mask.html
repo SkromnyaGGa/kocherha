@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Antic&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+<style>
+    .page article div{
+        margin-top: 0;
+        display: flex;
+        border-radius: 0;
+        overflow: unset;
+        background: none;
+
+    }
+
+
+</style>
+<body>
+<header class="site-header">
+    <div class="logo">
+        <img src="svg/logo-white.svg" alt="Театр Кочерги">
+    </div>
+
+    <nav class="main-nav">
+        <ul class="nav-list">
+            <li><a href="#">Афіша</a></li>
+            <li><a href="#">Репертуар</a></li>
+            <li><a href="#">Колектив</a></li>
+        </ul>
+    </nav>
+
+    <nav class="secondary-nav">
+        <ul class="nav-list">
+            <li><a href="#">Новини</a></li>
+            <li><a href="#" class="active">Контакти</a></li>
+        </ul>
+    </nav>
+
+    <div class="header-actions">
+        <button class="icon-btn search-btn" aria-label="Пошук">
+            <img src="svg/search.svg" alt="Пошук">
+        </button>
+        <button class="icon-btn profile-btn" aria-label="Профіль користувача">
+            <img src="svg/user.svg" alt="Профіль користувача">
+        </button>
+    </div>
+</header>
+
+<section class="hero" style="padding-bottom: 0;">
+    <img src="img/mask.png" alt="">
+    <h1 class="headline-text mask">ЗНІМАЙ МАСКУ</h1>
+    <div class="auth-buttons">
+        <a href="#" class="register">зареєструватись</a>
+        <a href="#" class="login">УВІЙТИ</a>
+    </div>
+    <div class="hero-show-card" style="top:50%; left: 10%; height: 210px; width: 575px; align-items: unset;">
+        <h6 class="show-card-title" style="font-size: 20px; font-weight: bold; width: unset; margin-bottom: 0; letter-spacing: unset;">Далі йдуть тільки свої</h6>
+        <p class="show-card-text" style="font-size: 20px; font-weight: 400; width: unset;">Щоб купити квиток, доведеться<br> показати обличчя. Жодного спаму.<br>Тільки чесний діалог.</p>
+    </div>
+    <div class="promo">
+        <img
+                class="promo__photo"
+                src="img/register-photo.png"
+                alt="Театр Кочерги"
+                width="230"
+                height="252"
+        >
+
+        <div class="promo__content">
+            <h2 class="promo__title">Реєструйся<br>зараз</h2>
+
+            <p class="promo__text">
+                Ми дамо тобі першу знижку за реєстрацію щоб ти вперше побачив головне
+            </p>
+
+            <a href="#" class="promo__btn">Зареєструватись</a>
+        </div>
+    </div>
+
+    <div class="hero-headline" style="display: block; bottom: 8%; right: 36.5%"><h1 class="headline-text headline-top"
+                                                                                 style='margin-left: 140px; text-align: left;'>БАЧИТИ<img src="svg/vector.svg" alt="↗"></h1>
+        <div class="headline-bottom"><a href="#" class="headline-btn" aria-label="Перейти">
+            <img src="svg/vector-right-down.svg" alt="">
+        </a>
+            <h2 class="headline-text headline-left">ГОЛОВНЕ
+            </h2></div>
+    </div>
+</section>
+
+
+</body>
+<script src="scripts/posters.js"></script>
+</html>
